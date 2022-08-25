@@ -8,7 +8,10 @@
     <title>AAAAAAAAAA - Almacen de Carlos</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -49,6 +52,7 @@
                 <div class="contactos"><img src="/images/iconos/1.jpg" alt="BannerUno" />
                     <img src="/images/iconos/2.jpg" alt="BannerUno" /></div>
             </div>
+
         </header>
 
 
@@ -107,10 +111,27 @@
         <article class="content">
 
 
-            <div class="bannersPrincipales">
-                <div><img src="/images/banners principales/1.jpg" alt="BannerUno" class="responsiveImage" /></div>
-                <!-- <div><img src="/images/banners principales/2.jpg" alt="BannerDos" /></div> -->
+            <div class="slick-carousel">
+
+                <div>
+
+                    <img src="/images/banners principales/1.jpg" width="100%" />
+                </div>
+                <div>
+                    <img src="/images/banners principales/2.jpg" width="100%" />
+                </div>
+
             </div>
+
+
+            <!-- <div class="bannersPrincipales">
+                <div><img src="/images/banners principales/1.jpg" alt="BannerUno" class="responsiveImage" /></div>
+
+            </div> -->
+
+
+
+
 
             <div class="h-divider">
                 <div class="shadow"></div>
@@ -150,23 +171,58 @@
 
         </article>
 
-        <footer class=" footer">Footer
+        <footer class=" footer">
             <div class="h-divider">
                 <div class="shadow"></div>
                 <div class="text">NUESTRAS MARCAS</div>
+            </div>
+            <div class="slick-carousel2">
+                <div><img src="/images/logos marcas/1.jpg" alt="logoMarca1" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/2.jpg" alt="logoMarca2" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/3.jpg" alt="logoMarca3" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/4.jpg" alt="logoMarca4" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/5.jpg" alt="logoMarca5" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/6.jpg" alt="logoMarca6" class="imagenesMarcas" /></div>
+                <div><img src="/images/logos marcas/7.jpg" alt="logoMarca7" class="imagenesMarcas" /></div>
+
+
+
+
+
             </div>
         </footer>
 
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
-    </script>
+
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- slick Carousel CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
     <script type="text/javascript">
-        // $('.bannersPrincipales').slick();
-        $('.bannersPrincipales').slick({});
-    </script> -->
+        // Basic initialization is like this:
+        // $('.your-class').slick();
+
+        // I added some other properties to customize my slider
+        // Play around with the numbers and stuff to see
+        // how it works.
+        $(".slick-carousel").slick({
+            infinite: false,
+            slidesToShow: 1, // Shows a three slides at a time
+            slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+            arrows: true, // Adds arrows to sides of slider
+            dots: true, // Adds the dots on the bottom
+        });
+
+        $(".slick-carousel2").slick({
+            infinite: true,
+            slidesToShow: 4, // Shows a three slides at a time
+            slidesToScroll: 1, // When you click an arrow, it scrolls 1 slide at a time
+            arrows: true, // Adds arrows to sides of slider
+            dots: true, // Adds the dots on the bottom
+        });
+    </script>
 
 
 </body>
